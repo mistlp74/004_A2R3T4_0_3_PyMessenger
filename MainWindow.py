@@ -189,7 +189,7 @@ def open_add_user_window(container_frame, chat_area):
     win.geometry("200x175")
     win.grab_set()
 
-    tk.Label(win, text="Ім'я:").pack(pady=(10, 0))
+    tk.Label(win, text="name:").pack(pady=(10, 0))
     name_entry = tk.Entry(win)
     name_entry.pack(pady=5, padx=10, fill=tk.X)
 
@@ -218,7 +218,7 @@ def add_contact_logic(contact, container, chat_area, send_request=False):
 
     to_number = str(contact.get("number", "")).strip()
     if not to_number:
-        print("Контакт без 'number':", contact)
+        print("contact without number 'number':", contact)
         return
 
     name = contact.get("name") or to_number
